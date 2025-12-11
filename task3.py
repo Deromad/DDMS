@@ -1,29 +1,3 @@
-"""
-morris_covasim.py
-
-Morris global sensitivity analysis (Method of Elementary Effects) for Covasim.
-
-This script:
- - Defines parameter ranges for 4 Covasim parameters:
-     * beta            : overall per-contact transmission probability (contagiousness)
-     * asymp_factor    : multiplier on beta for asymptomatic infections (infectiousness of asymptomatics)
-     * rel_symp_prob   : multiplier on baseline symptomatic probability
-     * rel_death_prob  : multiplier on baseline death probability (lethality multiplier)
- - Builds r Morris trajectories on a p-level grid and step delta
- - For each unique design point, runs m stochastic replicates of a Covasim simulation,
-   averages the outcome (total cumulative deaths) and stores results
- - Computes elementary effects per parameter, then mu, mu_star, sigma
- - Saves results to CSV and optionally plots a mu_star vs sigma scatter
-
-USAGE:
-    python morris_covasim.py
-
-NOTES:
- - This file only *writes* the code; it does not run anything by itself unless you execute it.
- - Covasim must be installed (pip install covasim) to run this script.
- - The script uses simple serial execution; for speed you can replace the single Sim runs
-   with cv.MultiSim or parallel execution (joblib / multiprocessing).
-"""
 
 import numpy as np
 import pandas as pd
