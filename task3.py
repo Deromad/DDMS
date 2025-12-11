@@ -38,7 +38,7 @@ import matplotlib.pyplot as plt
 # -------------------------
 r = 20            # number of Morris trajectories (recommend 10-50)
 p = 4             # grid levels per parameter (>=4)
-m = 2             # number of stochastic replicates per design point
+m = 30             # number of stochastic replicates per design point
 sim_days = 100    # simulation horizon (days)
 pop_size = 20000  # Covasim population size (tune for speed vs realism)
 seed_base = 12345 # base RNG seed
